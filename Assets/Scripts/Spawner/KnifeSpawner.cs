@@ -30,7 +30,7 @@ namespace Knife.Core
 		protected internal override void CreatePool()
 		{
 			_pooledKnifeObjects = new Stack<GameObject>();
-			var knifeSize = Random.Range(4, 7);
+			var knifeSize = Random.Range(7, 10);
 
 			for (int i = 0; i < knifeSize; i++)
 			{
