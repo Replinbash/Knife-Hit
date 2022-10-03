@@ -3,12 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
 using Knife.Attack;
+using static UnityEngine.RuleTile.TilingRuleOutput;
 
 namespace Knife.Circle
 {
 	public class CircleController : MonoBehaviour
 	{
 		[SerializeField] private CircleSettings _circleSettings;
+		private float coroutineTimer = 3f;
 
 		private void OnEnable() => KnifeController.CircleDamage += DOShake;
 		private void OnDisable() => KnifeController.CircleDamage -= DOShake;
@@ -36,9 +38,22 @@ namespace Knife.Circle
 					break;
 
 				case CircleSettings.RotateType.Random:
-					_circleSettings.RotateSpeed = (Random.Range(0, 100) < 50 ? -1f : 1f) * Random.Range(50f, _circleSettings.RotateSpeed);
+					{
+						StartCoroutine(RandomRotation());
+					}
 					break;
 			}
+		}
+
+		public IEnumerator RandomRotation()
+		{
+			while (true)
+			{
+				yield return new WaitForSeconds(coroutineTimer);
+				_circleSettings.RotateSpeed = (Random.Range(0, 100) < 50 ? -1f : 1f) * Random.Range(50f, _circleSettings.RotateSpeed);
+				Debug.Log("Random Rotate: " + _circleSettings.RotateSpeed);
+			}
+			
 		}
 
 		public void DOShake() => transform.DOShakePosition(_circleSettings.Duration, _circleSettings.Strenght, _circleSettings.Vibrato);

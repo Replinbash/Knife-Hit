@@ -1333,9 +1333,9 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   levelSettings:
+  - {fileID: 11400000, guid: f1877781068809d49b48e506e5181b1d, type: 2}
   - {fileID: 11400000, guid: 9eae4359b1f533e40a83b7fac4c3eb35, type: 2}
   - {fileID: 11400000, guid: 1d2b87aa5e10cde4cbb6b88fa164cece, type: 2}
-  - {fileID: 11400000, guid: f1877781068809d49b48e506e5181b1d, type: 2}
 --- !u!114 &1727611947
 MonoBehaviour:
   m_ObjectHideFlags: 0

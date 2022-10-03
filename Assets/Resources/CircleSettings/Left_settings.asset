@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Left_settings
   m_EditorClassIdentifier: 
   rotateType: 0
-  rotateSpeed: 150
+  rotateSpeed: 200
   Duration: 0.2
   Strenght: 0.1
   Vibrato: 15
