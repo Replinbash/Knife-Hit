@@ -828,6 +828,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+  stageText: {fileID: 1113109870}
 --- !u!114 &1079800094
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1316,7 +1317,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _knifeSpawner: {fileID: 638265560}
-  _stageText: {fileID: 1113109870}
+  levelSettings:
+  - {fileID: 11400000, guid: f1877781068809d49b48e506e5181b1d, type: 2}
+  - {fileID: 11400000, guid: 9eae4359b1f533e40a83b7fac4c3eb35, type: 2}
+  - {fileID: 11400000, guid: 1d2b87aa5e10cde4cbb6b88fa164cece, type: 2}
   gameOver:
     m_PersistentCalls:
       m_Calls:
@@ -1332,10 +1336,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  levelSettings:
-  - {fileID: 11400000, guid: f1877781068809d49b48e506e5181b1d, type: 2}
-  - {fileID: 11400000, guid: 9eae4359b1f533e40a83b7fac4c3eb35, type: 2}
-  - {fileID: 11400000, guid: 1d2b87aa5e10cde4cbb6b88fa164cece, type: 2}
 --- !u!114 &1727611947
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1349,6 +1349,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _breakWood: {fileID: 198406193673109968, guid: 3947b6099faf3ea408a91b3625d19e9a, type: 3}
+  _particleHolder: {fileID: 1727611945}
   _hitParticles:
   - {fileID: 198314479377665406, guid: 30992170b829fed449253b05b1cddc5a, type: 3}
   - {fileID: 198276289501521494, guid: e057e4784ad6c4a4ca6257063e6175b8, type: 3}

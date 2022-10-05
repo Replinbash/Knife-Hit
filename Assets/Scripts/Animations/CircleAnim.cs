@@ -9,7 +9,9 @@ namespace Knife.Anim
 {
 	public class CircleAnim : BaseAnim
 	{
+		[Header("Particles")]
 		[SerializeField] private ParticleSystem _breakWood;
+		[SerializeField] private Transform _particleHolder;
 		[SerializeField] private ParticleSystem[] _hitParticles;
 
 		private CircleSpawner _circleSpawner;
@@ -34,7 +36,7 @@ namespace Knife.Anim
 
 		public IEnumerator NextCircleAnim()
 		{
-			ParticleSystem obj = Instantiate(_breakWood);
+			ParticleSystem obj = Instantiate(_breakWood, _particleHolder);
 			obj.Play();
 			yield return new WaitForSeconds(1.0f);
 			obj.Clear();
@@ -49,7 +51,7 @@ namespace Knife.Anim
 
 			foreach (var particle in _hitParticles)
 			{
-				ParticleSystem obj = Instantiate(particle);
+				ParticleSystem obj = Instantiate(particle, _particleHolder);
 				obj.Play();
 			}
 		}

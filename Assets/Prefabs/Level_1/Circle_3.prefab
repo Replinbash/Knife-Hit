@@ -115,3 +115,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _circleSettings: {fileID: 11400000, guid: 92e099833c9d8ca48a918a157998abf9, type: 2}
+  ease: 32

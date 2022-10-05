@@ -13,7 +13,5 @@ MonoBehaviour:
   m_Name: Random_settings
   m_EditorClassIdentifier: 
   rotateType: 2
-  rotateSpeed: 600
-  Duration: 0.2
-  Strenght: 0.1
-  Vibrato: 15
+  EaseType: 7
+  rotateSpeed: 1.6

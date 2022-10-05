@@ -13,7 +13,5 @@ MonoBehaviour:
   m_Name: Right_settings
   m_EditorClassIdentifier: 
   rotateType: 1
+  EaseType: 0
   rotateSpeed: 250
-  Duration: 0.2
-  Strenght: 0.1
-  Vibrato: 15

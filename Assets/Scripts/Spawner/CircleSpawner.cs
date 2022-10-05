@@ -5,19 +5,14 @@ using Knife.Level;
 using Knife.Anim;
 using System;
 using Random = UnityEngine.Random;
-using TMPro;
 using UnityEngine.Events;
 
 namespace Knife.Core
 {
 	public class CircleSpawner : BaseSpawner
 	{
-
 		[SerializeField] private KnifeSpawner _knifeSpawner;
-		[SerializeField] private TextMeshProUGUI _stageText;
-		private Queue<GameObject> _pooledCircleObjects = new Queue<GameObject>();
-
-		public UnityEvent gameOver;
+		private Queue<GameObject> _pooledCircleObjects = new Queue<GameObject>();	
 
 		private Vector2[] _applePos = new Vector2[]
 		{
@@ -32,6 +27,7 @@ namespace Knife.Core
 		};
 
 		public LevelSettings[] levelSettings;
+		public UnityEvent gameOver;
 
 		private void OnEnable() => CircleAnim.NextCircle += GetCircleObject;
 		private void OnDisable() => CircleAnim.NextCircle -= GetCircleObject;
@@ -71,7 +67,7 @@ namespace Knife.Core
 
 				GameObject obj = _pooledCircleObjects.Dequeue();
 				obj.SetActive(true);
-				_stageText.text = "Stage " + levelSettings[levelIndex].Index.ToString();
+				GameManager.Instance.StageText.text = "Stage " + levelSettings[levelIndex].Index.ToString();
 			}
 
 			catch (InvalidOperationException)

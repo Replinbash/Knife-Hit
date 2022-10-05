@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using DG.Tweening;
 using UnityEngine;
 
 namespace Knife.Circle
@@ -16,17 +17,8 @@ namespace Knife.Circle
 		}
 		[Header("Rotation Settings")]
 		public RotateType rotateType;
-
+		public Ease EaseType;
 		public float rotateSpeed;
-		public float RotateSpeed
-		{
-			get { return rotateSpeed; }
-			set {}
-		}
-
-		[Header("Shake Settings")]
-		public float Duration;
-		public float Strenght;
-		public int Vibrato;
+		public float RotateSpeed { get { return rotateSpeed; } }		
 	}
 }
