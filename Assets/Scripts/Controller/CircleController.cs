@@ -3,14 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
 using Knife.Attack;
-using static UnityEngine.RuleTile.TilingRuleOutput;
 
 namespace Knife.Circle
 {
 	public class CircleController : MonoBehaviour
 	{
 		[SerializeField] private CircleSettings _circleSettings;
-		private float coroutineTimer = 3f;
+		private Coroutine _coroutine;
 
 		private void OnEnable() => KnifeController.CircleDamage += DOShake;
 		private void OnDisable() => KnifeController.CircleDamage -= DOShake;
@@ -20,40 +19,38 @@ namespace Knife.Circle
 			GenerateRotate();
 		}
 
-		void Update()
-		{
-			transform.Rotate(0f, 0f, _circleSettings.RotateSpeed * Time.deltaTime);
-		}
-
 		public void GenerateRotate()
 		{
 			switch (_circleSettings.rotateType)
 			{
 				case CircleSettings.RotateType.Left:
-					_circleSettings.RotateSpeed = -_circleSettings.RotateSpeed;
+					_coroutine = StartCoroutine(RotateCircle(false, -1f));
 					break;
 
 				case CircleSettings.RotateType.Right:
-					_circleSettings.RotateSpeed = +_circleSettings.RotateSpeed;
+					_coroutine = StartCoroutine(RotateCircle(false, 1f));
 					break;
 
 				case CircleSettings.RotateType.Random:
-					{
-						StartCoroutine(RandomRotation());
-					}
+					_coroutine = StartCoroutine(RotateCircle(true, -1f));
 					break;
 			}
 		}
 
-		public IEnumerator RandomRotation()
+		public IEnumerator RotateCircle(bool isRandom, float value)
 		{
 			while (true)
 			{
-				yield return new WaitForSeconds(coroutineTimer);
-				_circleSettings.RotateSpeed = (Random.Range(0, 100) < 50 ? -1f : 1f) * Random.Range(50f, _circleSettings.RotateSpeed);
-				Debug.Log("Random Rotate: " + _circleSettings.RotateSpeed);
+				if (isRandom)
+					transform.DORotate(new Vector3(0, 0, value), _circleSettings.RotateSpeed * Time.deltaTime,
+					RotateMode.FastBeyond360);
+
+				else
+					transform.Rotate(0f, 0f, _circleSettings.RotateSpeed * value * Time.deltaTime);
+
+				yield return null;
 			}
-			
+
 		}
 
 		public void DOShake() => transform.DOShakePosition(_circleSettings.Duration, _circleSettings.Strenght, _circleSettings.Vibrato);
