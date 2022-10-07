@@ -1,35 +1,38 @@
-using System.Collections;
-using System.Collections.Generic;
+using System;
 using UnityEngine;
 
 public class Bonus : MonoBehaviour
 {
 	public ParticleSystem cutVFX;
-	private Rigidbody2D _rb;
+	private CircleCollider2D _collider;
+	private SpriteRenderer _sprite;
 
-	private void Start()
+	public static event Action BonusDamage;
+
+	private void Awake()
 	{
-		_rb = GetComponent<Rigidbody2D>();
+		_collider = GetComponent<CircleCollider2D>();
+		_sprite = GetComponent<SpriteRenderer>();
 	}
 
 	private void OnTriggerEnter2D(Collider2D collision)
 	{
 		if (collision.CompareTag("Untagged"))
 		{
-			cutVFX.Play();
 			ExplosionBonus();
+			cutVFX.Play();
 			Destroy(gameObject, 1.5f);
+			BonusDamage.Invoke();
 		}
+
+		if (collision.CompareTag("Apple"))
+			Destroy(gameObject);
 	}
 
 	private void ExplosionBonus()
-	{		
-		_rb.freezeRotation = false;
-		_rb.constraints = RigidbodyConstraints2D.None;
+	{
+		_collider.enabled = false;
+		_sprite.enabled = false;
 		transform.SetParent(null);
-		_rb.gravityScale = 1;
-		_rb.bodyType = RigidbodyType2D.Dynamic;
-		Vector2 force = Vector3.up * 400f;
-		_rb.AddForce(force);
 	}
 }

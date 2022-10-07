@@ -13,7 +13,7 @@ namespace Knife.UI
 	{
 		[SerializeField] private Transform _content;
 		[SerializeField] private GameObject _item;
-		private int _nextItem = -1;
+		private int _currentItem = -1;
 
 		public Color itemColor;
 
@@ -48,13 +48,13 @@ namespace Knife.UI
 				}
 			}
 
-			_nextItem = -1;
+			_currentItem = -1;
 		}
 
 		public void ChangeSpriteColor()
 		{
-			_nextItem++;
-			var item = _content.transform.GetChild(_nextItem);
+			_currentItem++;
+			var item = _content.transform.GetChild(_currentItem);
 			item.gameObject.GetComponent<Image>().color = itemColor;
 		}
 

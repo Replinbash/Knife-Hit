@@ -39,7 +39,7 @@ namespace Knife.Circle
 					break;
 
 				case CircleSettings.RotateType.Right:
-					StartCoroutine(DefaultRotate(1f));
+					StartCoroutine(DefaultRotate(+1f));
 					break;
 
 				case CircleSettings.RotateType.Random:
@@ -60,11 +60,11 @@ namespace Knife.Circle
 			return _sequance;
 		}
 
-		public IEnumerator DefaultRotate(float value)
+		public IEnumerator DefaultRotate(float direction)
 		{
 			while (true)
 			{
-				transform.Rotate(0f, 0f, _circleSettings.RotateSpeed * value * Time.deltaTime);
+				transform.Rotate(0f, 0f, _circleSettings.RotateSpeed * direction * Time.deltaTime);
 				yield return new WaitForEndOfFrame();
 			}
 		}
