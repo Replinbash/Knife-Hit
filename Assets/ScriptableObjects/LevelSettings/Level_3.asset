@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cfd00ed0fccd804697108d5c611c583, type: 3}
+  m_Name: Level_3
+  m_EditorClassIdentifier: 
+  Index: 3
+  CirclePrefab: {fileID: 3446372977352385038, guid: 5f1cebda0eacbf1479392b9f4e23a88f, type: 3}
+  ApplePrefab: {fileID: 1961861215635450, guid: 4b9c4ffc310d5df429e76712b91cdb28, type: 3}
+  CircleSettings: {fileID: 11400000, guid: 92e099833c9d8ca48a918a157998abf9, type: 2}
+  AddApple: 0

@@ -25,7 +25,7 @@ public class Bonus : MonoBehaviour
 			BonusDamage.Invoke();
 		}
 
-		if (collision.CompareTag("Apple"))
+		if (collision.CompareTag("Apple") || collision.CompareTag("Knife"))
 			Destroy(gameObject);
 	}
 

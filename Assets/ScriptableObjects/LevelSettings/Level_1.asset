@@ -10,11 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0cfd00ed0fccd804697108d5c611c583, type: 3}
-  m_Name: Level_4
+  m_Name: Level_1
   m_EditorClassIdentifier: 
-  Index: 4
-  CirclePrefab: {fileID: 1065503244660034585, guid: 5315441540c07fe44aa4fbd2811a75ce, type: 3}
+  Index: 1
+  CirclePrefab: {fileID: 3096084299322949829, guid: 71c9a4cb214b09a46922442480f755c1, type: 3}
   ApplePrefab: {fileID: 1961861215635450, guid: 4b9c4ffc310d5df429e76712b91cdb28, type: 3}
-  PoolSize: 0
-  AddKnife: 0
-  AddApple: 1
+  CircleSettings: {fileID: 11400000, guid: dd95a4bdc35fb2441a8c3d5547810b78, type: 2}
+  AddApple: 0

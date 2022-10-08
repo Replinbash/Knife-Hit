@@ -1,15 +1,15 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
 using Knife.Attack;
+using Knife.Level;
 
 namespace Knife.Circle
 {
 	public class CircleController : MonoBehaviour
 	{
-		[SerializeField] private CircleSettings _circleSettings;
-		private Sequence _sequance; 
+		[SerializeField] private LevelSettings _level;
+		private Sequence _sequance;
 
 		[Header("Shake Settings")]
 		private float _duration = 0.2f;
@@ -32,7 +32,7 @@ namespace Knife.Circle
 
 		public void GenerateRotate()
 		{
-			switch (_circleSettings.rotateType)
+			switch (_level.CircleSettings.rotateType)
 			{
 				case CircleSettings.RotateType.Left:
 					StartCoroutine(DefaultRotate(-1f));
@@ -42,29 +42,36 @@ namespace Knife.Circle
 					StartCoroutine(DefaultRotate(+1f));
 					break;
 
-				case CircleSettings.RotateType.Random:
-					RandomRotate();
+				case CircleSettings.RotateType.HalfRotate:
+					RandomRotate(false);
+					break;
+				case CircleSettings.RotateType.FullRotate:
+					RandomRotate(true);
 					break;
 			}
 		}
 
-		private Tween RandomRotate()
+		private void RandomRotate(bool isFullRotate)
 		{
 			_sequance = DOTween.Sequence();
-			_sequance.Append(transform.DORotate(new Vector3(0, 0, 360), _circleSettings.RotateSpeed, RotateMode.FastBeyond360)
-			.SetEase(_circleSettings.EaseType));
-			_sequance.Append(transform.DORotate(new Vector3(0, 0, -360), _circleSettings.RotateSpeed, RotateMode.FastBeyond360)
-			.SetEase(_circleSettings.EaseType));
-			_sequance.SetLoops(-1);
+			_sequance.Append(transform.DORotate(new Vector3(0, 0, 360), _level.CircleSettings.RotateSpeed, RotateMode.FastBeyond360)
+			.SetEase(_level.CircleSettings.EaseType));
 
-			return _sequance;
+			if (isFullRotate)
+			{
+				_sequance.Append(transform.DORotate(new Vector3(0, 0, -360), _level.CircleSettings.RotateSpeed, RotateMode.FastBeyond360)
+				.SetEase(_level.CircleSettings.EaseType));
+			}
+
+			_sequance.SetEase(_level.CircleSettings.EaseType);
+			_sequance.SetLoops(-1);
 		}
 
 		public IEnumerator DefaultRotate(float direction)
 		{
 			while (true)
 			{
-				transform.Rotate(0f, 0f, _circleSettings.RotateSpeed * direction * Time.deltaTime);
+				transform.Rotate(0f, 0f, _level.CircleSettings.RotateSpeed * direction * Time.deltaTime);
 				yield return new WaitForEndOfFrame();
 			}
 		}

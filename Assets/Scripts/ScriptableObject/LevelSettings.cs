@@ -1,19 +1,18 @@
-using System.Collections;
-using System.Collections.Generic;
-using System.Runtime.Serialization;
 using UnityEngine;
+using Knife.Circle;
 
 namespace Knife.Level
 {
 	[CreateAssetMenu(menuName = "Knife/CreateNewLevel")]
 	public class LevelSettings : ScriptableObject
-	{	
+	{
+		[Header("Settings")]
 		public int Index;
 		public GameObject CirclePrefab;
 		public GameObject ApplePrefab;
-		public int PoolSize;
 
 		[Header("Circle Property")]
+		public CircleSettings CircleSettings;
 		public bool AddApple;
 	}
 }

@@ -50,8 +50,8 @@ namespace Knife.Core
 			}
 			catch (InvalidOperationException)
 			{				
-				Debug.Log("Knife Stack Bitti!");
 				_circleAnim.StartCircleAnim();
+				Debug.Log("Knife Stack Bitti!");
 			}
 		}
 	}

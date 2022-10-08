@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe756077516213841a77e13d23beb26f, type: 3}
-  m_Name: Left_settings
+  m_Name: Half_rotate2
   m_EditorClassIdentifier: 
-  rotateType: 0
-  EaseType: 0
-  rotateSpeed: 250
+  rotateType: 2
+  EaseType: 7
+  rotateSpeed: 5

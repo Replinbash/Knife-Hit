@@ -8,13 +8,14 @@ namespace Knife.Circle
 	[CreateAssetMenu(menuName = "Knife/CircleSettings")]
 	public class CircleSettings : ScriptableObject
 	{
-		
 		public enum RotateType
 		{
 			Left,
 			Right,
-			Random
+			HalfRotate,
+			FullRotate,
 		}
+
 		[Header("Rotation Settings")]
 		public RotateType rotateType;
 		public Ease EaseType;

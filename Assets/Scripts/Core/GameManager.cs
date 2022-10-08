@@ -3,7 +3,7 @@ using Knife.Attack;
 using TMPro;
 using UnityEngine.Events;
 
-namespace Knife.Core // Bu scripte olacak olanlar: puan, oyun reseti...
+namespace Knife.Core 
 {
 	public class GameManager : MonoSingleton<GameManager>
 	{	
@@ -40,22 +40,22 @@ namespace Knife.Core // Bu scripte olacak olanlar: puan, oyun reseti...
 		private void Start()
 		{
 			isRestarted = false;
-			Text(BonusScoreText, _bonusScore);
+			UIText(BonusScoreText, _bonusScore);
 		}
 
 		private void GameScore()
 		{
 			_gameScore++;
-			Text(GameScoreText, _gameScore);
+			UIText(GameScoreText, _gameScore);
 		}
 
 		private void BonusScore()
 		{
 			_bonusScore++;
-			Text(BonusScoreText, _bonusScore);
+			UIText(BonusScoreText, _bonusScore);
 		}
 
-		public string Text(TextMeshProUGUI text, int value)
+		public string UIText(TextMeshProUGUI text, int value)
 		{
 			return text.text = value.ToString();
 		}

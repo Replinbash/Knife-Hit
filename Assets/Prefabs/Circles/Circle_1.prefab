@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3096084299322949838}
   - component: {fileID: 3096084299322949839}
   m_Layer: 0
-  m_Name: Circle_3
+  m_Name: Circle_1
   m_TagString: Circle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -114,5 +114,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 029fc6439ce45834d9382fd41d2442b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _circleSettings: {fileID: 11400000, guid: 92e099833c9d8ca48a918a157998abf9, type: 2}
-  ease: 32
+  _level: {fileID: 11400000, guid: 9eae4359b1f533e40a83b7fac4c3eb35, type: 2}

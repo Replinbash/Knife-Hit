@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe756077516213841a77e13d23beb26f, type: 3}
-  m_Name: Right_settings
+  m_Name: Full_Rotate
   m_EditorClassIdentifier: 
-  rotateType: 1
-  EaseType: 0
-  rotateSpeed: 250
+  rotateType: 3
+  EaseType: 7
+  rotateSpeed: 2.5

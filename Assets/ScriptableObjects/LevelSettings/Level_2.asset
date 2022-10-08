@@ -13,8 +13,7 @@ MonoBehaviour:
   m_Name: Level_2
   m_EditorClassIdentifier: 
   Index: 2
-  CirclePrefab: {fileID: 3096084299322949829, guid: abc9885b6e3fbb342915b61e746c3bc7, type: 3}
+  CirclePrefab: {fileID: 5233019572788593826, guid: 95fa34ba52184b541932daf5cbf71cc8, type: 3}
   ApplePrefab: {fileID: 1961861215635450, guid: 4b9c4ffc310d5df429e76712b91cdb28, type: 3}
-  PoolSize: 4
-  AddKnife: 0
+  CircleSettings: {fileID: 11400000, guid: 698e7d8c0350ce44db0b742592212219, type: 2}
   AddApple: 1
