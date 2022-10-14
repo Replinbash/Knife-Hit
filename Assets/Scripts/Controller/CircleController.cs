@@ -45,6 +45,7 @@ namespace Knife.Circle
 				case CircleSettings.RotateType.HalfRotate:
 					RandomRotate(false);
 					break;
+
 				case CircleSettings.RotateType.FullRotate:
 					RandomRotate(true);
 					break;
