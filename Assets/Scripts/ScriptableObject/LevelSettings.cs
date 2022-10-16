@@ -14,6 +14,5 @@ namespace Knife.Level
 		[Header("Circle Property")]
 		public CircleSettings CircleSettings;
 		public bool AddApple;
-		public AudioClip CircleHitAudio;
 	}
 }

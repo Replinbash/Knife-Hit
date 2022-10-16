@@ -7,7 +7,7 @@ using Knife.Core;
 
 namespace Knife.Anim
 {
-	public class CircleAnim : BaseAnim
+	public class CircleAnim : MonoBehaviour
 	{
 		[Header("Particles")]
 		[SerializeField] private ParticleSystem _breakWood;

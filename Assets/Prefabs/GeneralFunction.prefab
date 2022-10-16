@@ -15,7 +15,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &8574308856234285684
 RectTransform:
   m_ObjectHideFlags: 0
@@ -194,7 +194,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -23.2, y: -25}
+  m_AnchoredPosition: {x: 9.2, y: -25.8}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8494464685324574089
@@ -225,7 +225,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 000
+  m_text: '0
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f8fb5bc27636bc340812bf0d05fad757, type: 2}
   m_sharedMaterial: {fileID: -7612110738754829815, guid: f8fb5bc27636bc340812bf0d05fad757, type: 2}
@@ -259,7 +261,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
+  m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -822,7 +824,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -114.9, y: 269.5}
-  m_SizeDelta: {x: 160, y: 30}
+  m_SizeDelta: {x: 88.75832, y: 37.371925}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8572469243198136466
 CanvasRenderer:
@@ -933,7 +935,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -101, y: 179.9}
-  m_SizeDelta: {x: 88.553856, y: 35.869915}
+  m_SizeDelta: {x: 117.82538, y: 37.371925}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8571558002765085748
 CanvasRenderer:
@@ -1241,7 +1243,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: -120.6}
-  m_SizeDelta: {x: 160, y: 30}
+  m_SizeDelta: {x: 72.14858, y: 42.04342}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8571725821313688728
 CanvasRenderer:
@@ -1585,7 +1587,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -50, y: -50}
+  m_AnchoredPosition: {x: -60, y: -60}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &8495977149558030774

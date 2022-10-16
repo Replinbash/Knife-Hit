@@ -115,3 +115,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _level: {fileID: 11400000, guid: 9eae4359b1f533e40a83b7fac4c3eb35, type: 2}
+  _hitAudio: {fileID: 8300000, guid: ea26f83816b750a4db1fef58efb0eadb, type: 3}

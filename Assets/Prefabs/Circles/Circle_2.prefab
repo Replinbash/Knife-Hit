@@ -411,3 +411,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _level: {fileID: 11400000, guid: 1d2b87aa5e10cde4cbb6b88fa164cece, type: 2}
+  _hitAudio: {fileID: 8300000, guid: ea26f83816b750a4db1fef58efb0eadb, type: 3}

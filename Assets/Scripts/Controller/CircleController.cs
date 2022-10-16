@@ -9,6 +9,7 @@ namespace Knife.Circle
 	public class CircleController : MonoBehaviour
 	{
 		[SerializeField] private LevelSettings _level;
+		[SerializeField] private AudioClip _hitAudio;
 		private Sequence _sequance;
 
 		[Header("Shake Settings")]
@@ -16,10 +17,10 @@ namespace Knife.Circle
 		private float _strenght = 0.1f;
 		private int _vibrato = 15;
 
-		private void OnEnable() => KnifeController.CircleDamage += DOShake;
+		private void OnEnable() => KnifeController.CircleDamage += OnHit;
 		private void OnDisable()
 		{
-			KnifeController.CircleDamage -= DOShake;
+			KnifeController.CircleDamage -= OnHit;
 			StopAllCoroutines();
 			_sequance.Pause();
 		}
@@ -77,6 +78,10 @@ namespace Knife.Circle
 			}
 		}
 
-		public void DOShake() => transform.DOShakePosition(_duration, _strenght, _vibrato);
+		public void OnHit()
+		{
+			transform.DOShakePosition(_duration, _strenght, _vibrato);
+			AudioManager.Instance.PlayAudio(_hitAudio);
+		}
 	}
 }

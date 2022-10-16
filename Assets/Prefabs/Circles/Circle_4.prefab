@@ -413,6 +413,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _level: {fileID: 11400000, guid: 3ffcb7b0937bd6d4091ca772ebcc867c, type: 2}
+  _hitAudio: {fileID: 8300000, guid: ea26f83816b750a4db1fef58efb0eadb, type: 3}
 --- !u!1 &7413398145583806234
 GameObject:
   m_ObjectHideFlags: 0

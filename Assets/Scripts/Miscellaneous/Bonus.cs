@@ -4,6 +4,7 @@ using UnityEngine;
 public class Bonus : MonoBehaviour
 {
 	public ParticleSystem cutVFX;
+	public AudioClip cutAudio;
 	private CircleCollider2D _collider;
 	private SpriteRenderer _sprite;
 
@@ -20,6 +21,7 @@ public class Bonus : MonoBehaviour
 		if (collision.CompareTag("Untagged"))
 		{
 			ExplosionBonus();
+			AudioManager.Instance.PlayAudio(cutAudio);
 			cutVFX.Play();
 			Destroy(gameObject, 1.5f);
 			BonusDamage.Invoke();

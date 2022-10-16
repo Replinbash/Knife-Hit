@@ -28,11 +28,6 @@ namespace Knife.Attack
 			{
 				KnifeMovement();
 			}
-
-			if (Input.GetKeyDown(KeyCode.Mouse1))
-			{
-				SceneManagement.Instance.LoadScene(1);
-			}
 		}
 
 		private void KnifeMovement()
