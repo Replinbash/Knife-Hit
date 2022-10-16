@@ -17,3 +17,4 @@ MonoBehaviour:
   ApplePrefab: {fileID: 1961861215635450, guid: 4b9c4ffc310d5df429e76712b91cdb28, type: 3}
   CircleSettings: {fileID: 11400000, guid: 698e7d8c0350ce44db0b742592212219, type: 2}
   AddApple: 1
+  CircleHitAudio: {fileID: 8300000, guid: 9f3644a7a8ace1a4abe416daa8dbf1c7, type: 3}
