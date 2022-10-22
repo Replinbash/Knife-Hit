@@ -674,6 +674,7 @@ GameObject:
   m_Component:
   - component: {fileID: 967706152}
   - component: {fileID: 967706153}
+  - component: {fileID: 967706154}
   m_Layer: 0
   m_Name: Left
   m_TagString: Boundry
@@ -722,6 +723,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.5, y: 13.4}
   m_EdgeRadius: 0
+--- !u!114 &967706154
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 967706151}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06e52eb22e1096a4aaa124a389e52568, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &995866184
 GameObject:
   m_ObjectHideFlags: 0
@@ -800,6 +813,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1000825629}
   - component: {fileID: 1000825630}
+  - component: {fileID: 1000825631}
   m_Layer: 0
   m_Name: Right
   m_TagString: Boundry
@@ -848,6 +862,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.5, y: 13.4}
   m_EdgeRadius: 0
+--- !u!114 &1000825631
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1000825628}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06e52eb22e1096a4aaa124a389e52568, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1079800091
 GameObject:
   m_ObjectHideFlags: 0
@@ -1516,6 +1542,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1902958399}
   - component: {fileID: 1902958400}
+  - component: {fileID: 1902958401}
   m_Layer: 0
   m_Name: Down
   m_TagString: Boundry
@@ -1564,6 +1591,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 9, y: 0.5}
   m_EdgeRadius: 0
+--- !u!114 &1902958401
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1902958398}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06e52eb22e1096a4aaa124a389e52568, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1956536173
 GameObject:
   m_ObjectHideFlags: 0
@@ -2448,7 +2487,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!222 &112088817761047714
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4462,7 +4501,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 136, y: 2.8999996}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 128, y: 73}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &185305886637582997
 RectTransform:

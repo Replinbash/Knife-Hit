@@ -44,15 +44,6 @@ namespace Knife.Attack
 			return new Vector2(randomX, randomY);
 		}
 
-		private void OnTriggerEnter2D(Collider2D collision)
-		{
-			if (collision.CompareTag("Boundry"))
-			{
-				GameManager.Instance.GameOver();
-				Destroy(gameObject);
-			}
-		}
-
 		private void OnCollisionEnter2D(Collision2D hit)
 		{
 			if (hit.gameObject.CompareTag("Circle"))
